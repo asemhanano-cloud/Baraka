@@ -1,1 +1,205 @@
-# Baraka
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر بركة | عالم من المنتجات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #27ae60; /* لون أخضر بركة */
+            --dark-color: #2c3e50;
+            --light-bg: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-color);
+        }
+
+        /* الهيدر (رأس الصفحة) */
+        header {
+            background-color: #fff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+            display: flex;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        /* قسم العروض (البانر) */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* شبكة المنتجات */
+        .container {
+            padding: 20px 5%;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            border-right: 5px solid var(--primary-color);
+            padding-right: 15px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .price {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* الفوتر (تذييل الصفحة) */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* تنسيق الموبايل */
+        @media (max-width: 600px) {
+            header { flex-direction: column; }
+            .search-bar { margin: 15px 0; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">متجر بـركـة</div>
+    <div class="search-bar">
+        <input type="text" placeholder="ابحث عن منتج، ماركة، أو قسم...">
+        <button><i class="fa fa-search"></i></button>
+    </div>
+    <div class="icons">
+        <i class="fa fa-shopping-cart fa-lg"></i>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>أهلاً بك في متجر بركة العالمي</h1>
+    <p>أفضل المنتجات بأقل الأسعار، جودة نثق بها.</p>
+</section>
+
+<div class="container">
+    <h2 class="section-title">أحدث المنتجات</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x200" alt="منتج" class="product-image">
+            <div class="product-info">
+                <h3>منتج ذكي 2026</h3>
+                <p class="price">150.00 $</p>
+                <button class="add-to-cart">أضف للسلة</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x200" alt="منتج" class="product-image">
+            <div class="product-info">
+                <h3>ساعة بركة الاحترافية</h3>
+                <p class="price">85.00 $</p>
+                <button class="add-to-cart">أضف للسلة</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x200" alt="منتج" class="product-image">
+            <div class="product-info">
+                <h3>جهاز منزلي متطور</h3>
+                <p class="price">320.00 $</p>
+                <button class="add-to-cart">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>جميع الحقوق محفوظة لمتجر بركة &copy; 2026</p>
+</footer>
+
+</body>
+</html>
